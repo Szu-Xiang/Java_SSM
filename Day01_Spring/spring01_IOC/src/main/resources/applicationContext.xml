@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--声明对象的创建-->
+    <!--一个bean，表示一个Java对象-->
+    <!--
+        bean标签，用于创建Java类对象，交给Spring的IOC容器管理
+            属性：
+                id：对象唯一标识 不能重复
+                class：对象全限定类名 【一般不写抽象类和接口】
+
+    -->
+    <!--创建Spring控制的资源-->
+    <!--<bean id="us" class="com.itheima.service.impl.UserServiceImpl"/>-->
+
+    <!--实例化bean三种方式-构造方法-->
+    <!--<bean id="us" class="com.itheima.service.impl.UserServiceImpl"/>-->
+
+    <!--实例化bean三种方式-实例化工厂-->
+    <!--先创建工厂bean 实际无意义,再写user的bean-->
+    <!--<bean id="instanceFactory" class="com.itheima.Factory.InstanceFactory"/>
+    <bean id="us3" factory-bean="instanceFactory" factory-method="getBean"/>-->
+
+    <!--使用FactoryBean来实例化bean-->
+    <!--
+                **重要**
+    -->
+    <bean id="usf" class="com.itheima.Factory.UserServiceFactoryBean"/>
+
+
+
+</beans>
