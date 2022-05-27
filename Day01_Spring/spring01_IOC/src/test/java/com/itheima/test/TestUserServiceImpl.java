@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestUserServiceImpl {
 
     //需求：使用单元测试类充当表现层调用业务代码， 调用UserServiceImpl的add方法
-    //1.或是去UserServiceImpl类的对象
+    //1.获取UserServiceImpl类的对象
     //2.使用UserServiceImpl类的对象调用方法
 
     @Test
